@@ -4,4 +4,4 @@ Este é o repositório para o projeto Enade. O projeto consiste em um sistema we
 
 ## Link do Projeto Online
 
-O projeto está hospedado no Render e pode ser acessado [aqui](https://dashboard.render.com/).
+O projeto está hospedado no Render e pode ser acessado [aqui](https://enade.onrender.com/).
