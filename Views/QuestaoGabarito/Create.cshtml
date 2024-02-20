@@ -1,0 +1,145 @@
+﻿@model ProjetoEnade.Models.QuestaoGabarito
+@using ProjetoEnade.Utils
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        $("#TipoProva").change(function () {
+            var selectValue = $(this).val();
+            if (selectValue == 1) {
+                $("#RespostaA").val('');
+                $("#RespostaB").val('');
+                $("#RespostaC").val('');
+                $("#RespostaD").val('');
+                $("#RespostaE").val('');
+                $("#RespostaCorreta").val(0);
+                $("#multiplaEscolha").hide("slow");
+                $("#multiplaEscolhaResposta").hide("slow");
+                $("#dissertativa").show("slow");
+
+            } else if (selectValue == 2) {
+                $("#RespostaDissertativa").val('');
+                $("#multiplaEscolha").show("slow");
+                $("#multiplaEscolhaResposta").show("slow");
+                $("#dissertativa").hide("slow");
+            }
+        });      
+    });
+</script>
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Novo</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DescricaoProva" class="control-label"></label>
+                <select asp-for="IdProva" class="form-control" asp-items="ViewBag.DetalhesProva"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoProva" class="control-label"></label>
+                <select asp-for="TipoProva" class="form-control" asp-items="Html.GetEnumSelectList<Enums.TipoDaProva>()"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MultiDisciplinas" class="control-label"></label>
+                <select asp-for="MultiDisciplinas" class="form-control" asp-items="ViewBag.Disciplinas" multiple></select>
+                <span asp-validation-for="MultiDisciplinas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DificuldadeQuestao" class="control-label"></label>
+                <select asp-for="DificuldadeQuestao" class="form-control" asp-items="Html.GetEnumSelectList<Enums.DificuldadeDaQuestao>()"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enunciado" class="control-label"></label>
+                <input asp-for="Enunciado" class="form-control" />
+                <span asp-validation-for="Enunciado" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EnunciadoImage" class="control-label"></label>
+                <input type="file" id="enunciadoImage" name="enunciadoImage" accept="image/*" />
+            </div>
+
+            <div id="multiplaEscolha" style="display:none">
+                <div class="form-group">
+                    <label asp-for="RespostaA" class="control-label"></label>
+                    <input asp-for="RespostaA" class="form-control" />
+                    <span asp-validation-for="RespostaA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaAImage" class="control-label"></label>
+                    <input type="file" id="respostaAImage" name="respostaAImage" accept="image/*" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaB" class="control-label"></label>
+                    <input asp-for="RespostaB" class="form-control" />
+                    <span asp-validation-for="RespostaB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaBImage" class="control-label"></label>
+                    <input type="file" id="respostaBImage" name="respostaBImage" accept="image/*" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaC" class="control-label"></label>
+                    <input asp-for="RespostaC" class="form-control" />
+                    <span asp-validation-for="RespostaC" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaCImage" class="control-label"></label>
+                    <input type="file" id="respostaCImage" name="respostaCImage" accept="image/*" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaD" class="control-label"></label>
+                    <input asp-for="RespostaD" class="form-control" />
+                    <span asp-validation-for="RespostaD" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaDImage" class="control-label"></label>
+                    <input type="file" id="respostaDImage" name="respostaDImage" accept="image/*" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaE" class="control-label"></label>
+                    <input asp-for="RespostaE" class="form-control" />
+                    <span asp-validation-for="RespostaE" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RespostaEImage" class="control-label"></label>
+                    <input type="file" id="respostaEImage" name="respostaEImage" accept="image/*" />
+                </div>
+            </div>
+            <div id="dissertativa">
+                <div class="form-group">
+                    <label asp-for="RespostaDissertativa" class="control-label"></label>
+                    <input asp-for="RespostaDissertativa" class="form-control" />
+                    <span asp-validation-for="RespostaDissertativa" class="text-danger"></span>
+                </div>
+            </div>
+            <div id="multiplaEscolhaResposta" style="display:none">
+                <div class="form-group">
+                    <label asp-for="RespostaCorreta" class="control-label"></label>
+                    <select asp-for="RespostaCorreta" class="form-control" asp-items="Html.GetEnumSelectList<Enums.RespostaCerta>()">
+                        <option value="0">Selecione uma resposta</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

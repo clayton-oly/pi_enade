@@ -1,0 +1,36 @@
+﻿@model ProjetoEnade.Models.RelatorioModel
+@using ProjetoEnade.Utils
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Excel" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MultiProvas" class="control-label"></label>
+                <select asp-for="MultiProvas" class="form-control" asp-items="ViewBag.DetalhesProva" multiple></select>
+                <span asp-validation-for="MultiProvas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoProva" class="control-label"></label>
+                <select asp-for="TipoProva" class="form-control" asp-items="Html.GetEnumSelectList<Enums.TipoDaProva>()">
+                    <option value="0">Selecione uma resposta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DificuldadeQuestao" class="control-label"></label>
+                <select asp-for="DificuldadeQuestao" class="form-control" asp-items="Html.GetEnumSelectList<Enums.DificuldadeDaQuestao>()">
+                    <option value="0">Selecione uma resposta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="RespostaCorreta" class="control-label"></label>
+                <select asp-for="RespostaCorreta" class="form-control" asp-items="Html.GetEnumSelectList<Enums.RespostaCerta>()">
+                    <option value="0">Selecione uma resposta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Gerar Excel" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

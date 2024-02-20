@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ProjetoEnade.Models.QuestaoGabarito>
+@using ProjetoEnade.Utils
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Novo</a>
+</p>
+<table class="table col-lg-12">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoProva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enunciado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoProva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DificuldadeQuestao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescricaoProva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Enunciado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescricaoTipoProva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescricaoDificuldadeQuestao)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

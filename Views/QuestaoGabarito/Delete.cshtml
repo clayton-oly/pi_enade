@@ -1,0 +1,138 @@
+﻿@model ProjetoEnade.Models.QuestaoGabarito
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Excluir</h1>
+
+<h3>Você tem certeza que quer excluir?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DescricaoProva)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DescricaoProva)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Enunciado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Enunciado)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EnunciadoImage)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@ViewBag.EnunciadoImageDataURL" height="200" width="150" />
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoProva)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DescricaoTipoProva)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.QuestoesDisciplinas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DescricaoDisciplinas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DificuldadeQuestao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DescricaoDificuldadeQuestao)
+        </dd>
+
+
+        @{
+            if (Model.DescricaoTipoProva.ToLower() == "múltipla escolha")
+            {
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaA)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RespostaA)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaAImage)
+                </dt>
+                <dd class="col-sm-10">
+                    <img src="@ViewBag.RespostaAImageDataURL" height="200" width="150" />
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaB)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RespostaB)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaBImage)
+                </dt>
+                <dd class="col-sm-10">
+                    <img src="@ViewBag.RespostaBImageDataURL" height="200" width="150" />
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaC)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RespostaC)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaCImage)
+                </dt>
+                <dd class="col-sm-10">
+                    <img src="@ViewBag.RespostaCImageDataURL" height="200" width="150" />
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaD)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RespostaD)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaDImage)
+                </dt>
+                <dd class="col-sm-10">
+                    <img src="@ViewBag.RespostaDImageDataURL" height="200" width="150" />
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaE)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RespostaE)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaEImage)
+                </dt>
+                <dd class="col-sm-10">
+                    <img src="@ViewBag.RespostaEImageDataURL" height="200" width="150" />
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaCorreta)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DescricaoRespostaCorreta)
+                </dd>
+            }
+            else if (Model.DescricaoTipoProva.ToLower() == "dissertativa")
+            {
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RespostaDissertativa)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RespostaDissertativa)
+                </dd>
+            }
+        }
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
