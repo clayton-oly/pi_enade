@@ -243,3 +243,4 @@ D:\DEV\projeto-enade\obj\Debug\net8.0\ref\ProjetoEnade.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\System.CodeDom.dll
+D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.sourcelink.json
