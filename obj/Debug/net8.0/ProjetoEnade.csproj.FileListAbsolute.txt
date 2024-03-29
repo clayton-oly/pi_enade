@@ -119,7 +119,6 @@ D:\DEV\projeto-enade\ProjetoEnade\obj\Debug\net8.0\refint\ProjetoEnade.dll
 D:\DEV\projeto-enade\ProjetoEnade\obj\Debug\net8.0\ProjetoEnade.pdb
 D:\DEV\projeto-enade\ProjetoEnade\obj\Debug\net8.0\ProjetoEnade.genruntimeconfig.cache
 D:\DEV\projeto-enade\ProjetoEnade\obj\Debug\net8.0\ref\ProjetoEnade.dll
-D:\DEV\projeto-enade\bin\Debug\net8.0\appsettings.Development.json
 D:\DEV\projeto-enade\bin\Debug\net8.0\appsettings.json
 D:\DEV\projeto-enade\bin\Debug\net8.0\ProjetoEnade.staticwebassets.runtime.json
 D:\DEV\projeto-enade\bin\Debug\net8.0\ProjetoEnade.exe
@@ -142,6 +141,7 @@ D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -151,9 +151,11 @@ D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\DEV\projeto-enade\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Npgsql.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\DEV\projeto-enade\bin\Debug\net8.0\System.CodeDom.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\System.Composition.Convention.dll
 D:\DEV\projeto-enade\bin\Debug\net8.0\System.Composition.Hosting.dll
@@ -226,6 +228,7 @@ D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.csproj.CoreCompileInputs.cach
 D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.MvcApplicationPartsAssemblyInfo.cache
 D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.RazorAssemblyInfo.cache
 D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.RazorAssemblyInfo.cs
+D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.sourcelink.json
 D:\DEV\projeto-enade\obj\Debug\net8.0\staticwebassets.build.json
 D:\DEV\projeto-enade\obj\Debug\net8.0\staticwebassets.development.json
 D:\DEV\projeto-enade\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoEnade.Microsoft.AspNetCore.StaticWebAssets.props
@@ -240,7 +243,3 @@ D:\DEV\projeto-enade\obj\Debug\net8.0\refint\ProjetoEnade.dll
 D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.pdb
 D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.genruntimeconfig.cache
 D:\DEV\projeto-enade\obj\Debug\net8.0\ref\ProjetoEnade.dll
-D:\DEV\projeto-enade\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-D:\DEV\projeto-enade\bin\Debug\net8.0\Mono.TextTemplating.dll
-D:\DEV\projeto-enade\bin\Debug\net8.0\System.CodeDom.dll
-D:\DEV\projeto-enade\obj\Debug\net8.0\ProjetoEnade.sourcelink.json

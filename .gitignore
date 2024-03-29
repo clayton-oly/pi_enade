@@ -1,0 +1,15 @@
+# Ignorar diretórios
+.vs/
+.vscode/
+bin/
+obj/
+Properties/
+
+# Ignorar arquivos específicos
+*.suo
+*.user
+*.log
+.DS_Store
+
+# Ignorar arquivos de compilação e solução
+ProjetoEnade.sln
